@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global */
+html,
+body {
+    overflow-x: hidden;
+    scrollbar-color: #8750f7 #2a1454;
+    scroll-padding-top: 64px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+section:not(#header) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+
+@media (min-width: 768px) {
+    html {
+        scroll-padding-top: 80px;
+    }
+}
+
+@media (min-width: 1024px) {
+    html {
+        scroll-padding-top: 100px;
+    }
+}
+
+/* Header Hero */
+.header-hero .image-container {
+    animation: linear infinite header-hero-animate 5s;
+    -webkit-animation: linear infinite header-hero-animate 5s;
+}
+
+@keyframes header-hero-animate {
+    0% {
+        transform: rotate(0) scale(1) translateY(0);
+        -webkit-transform: rotate(0) scale(1) translateY(0);
+        -moz-transform: rotate(0) scale(1) translateY(0);
+        -ms-transform: rotate(0) scale(1) translateY(0);
+        -o-transform: rotate(0) scale(1) translateY(0);
+    }
+
+    50% {
+        transform: rotate(6deg) scale(1.05) translateY(-10px);
+        -webkit-transform: rotate(6deg) scale(1.05) translateY(-10px);
+        -moz-transform: rotate(6deg) scale(1.05) translateY(-10px);
+        -ms-transform: rotate(6deg) scale(1.05) translateY(-10px);
+        -o-transform: rotate(6deg) scale(1.05) translateY(-10px);
+    }
+
+    100% {
+        transform: rotate(0) scale(1) translateY(0);
+        -webkit-transform: rotate(0) scale(1) translateY(0);
+        -moz-transform: rotate(0) scale(1) translateY(0);
+        -ms-transform: rotate(0) scale(1) translateY(0);
+        -o-transform: rotate(0) scale(1) translateY(0);
+    }
+}
+
+/* Loading Screen */
+.text-clip-animation {
+    background: linear-gradient(90deg, #ffffff, #000000);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-clip 1s ease-in-out infinite;
+    position: relative;
+    -webkit-animation: gradient-clip 1s ease-in-out infinite;
+}
+
+@keyframes gradient-clip {
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
